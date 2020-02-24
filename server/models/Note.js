@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 const ObjectId = Schema.Types.ObjectId;
 
-const note = new Schema(
+const Note = new Schema(
   {
     content: { type: String },
     bug: { type: ObjectId, ref: "bug" },
@@ -11,4 +11,4 @@ const note = new Schema(
   { timestamps: true, toJSON: { virtuals: true } }
 );
 
-export default note;
+export default Note;

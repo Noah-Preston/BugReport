@@ -7,9 +7,12 @@ const bug = new Schema(
     title: { type: String, required: true },
     description: { type: String, required: true },
     reportedBy: { type: String },
-    closedDate: { type: Date }
+    closedDate: { type: Date },
+    lastModified: { type: Date, default: Date.now }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
 
 export default bug;
+
+
